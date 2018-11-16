@@ -14,8 +14,8 @@ export class AppComponent {
   private results:Fact[]=[];
   private sno:number=1;
 
-  private inputString:string='Hello World';
-  private resultString:string='World Hello';
+  private inputString:string='';
+  private resultString:string='';
   private strResults:Rev[]=[];
 
   public deleteRev(data) {
@@ -46,5 +46,10 @@ export class AppComponent {
     let row = new Fact(this.sno,this.pnum,fact);
     this.results.push(row);
     this.sno=this.sno+1;
+  }
+
+  public clear() {
+    this.inputString="";
+    this.resultString="";
   }
 }
